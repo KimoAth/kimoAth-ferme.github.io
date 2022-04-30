@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .menu .cart-items-container .cart-item img[alt="pr"]{
+        width: 500px;
+        height: 400px;
+        margin: 10px;
+        margin-bottom: 0px;
+        display: inline-block;
+    }
+    /* .menu .cart-items-container #cart{
+        margin-left: 40%;
+        margin-top: -43.75%;
+    } */
+    .menu .cart-items-container .cart-item #cont{
+        display: inline-block;
+        width: 500px;
+        /* height: 20vh; */
+        text-align: center;
+        background-color: darkgreen;
+        color: white;
+        margin-top: -15px;
+        margin-bottom: 10%;
+    }
+    /* .menu .cart-items-container .cart-item .content1, .content3, .content5, .content7{
+        margin-left: -10px;
+        margin-right: 10px;
+    }
+    .menu .cart-items-container .cart-item .content2, .content4, .content6, .content8{
+        margin-right: -10px;
+        margin-left: 10px;
+    }
+    .menu .cart-items-container .cart-item .pic9{
+        display: none;
+    }
+    .menu .cart-items-container .cart-item .content9{
+        display: block;
+    } */
+    .menu .cart-items-container .cart-item #cont .prix{
+        margin-inline-start: -20px;
+        color: yellow;
+        font-size:32px;
+        font-weight: bolder;
+        margin-top: 10px;
+        margin-bottom: -20px;
+    }
+    .menu .cart-item #cont .counter{
+        /* position: relative;
+        top: -35px;
+        left: -150px; */
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-left: 5%;
+    }
+    .menu .cart-item #cont .counter .minus{
+        border: 3px solid white; 
+        color: #006400;
+        font-weight: bolder;
+        font-size: x-large;
+        width: 30px; 
+        height: 36px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        top: 7px;
+    }
+    
+    .menu .cart-item #cont .counter .h12{
+        border: 3px solid white; 
+        background-color: white;
+        font-size: large;
+        font-weight: bold;
+        color: darkgreen;
+        margin-left: 350px;
+        width: 60px; 
+        height: 30px;
+        display: inline-block;
+        margin-left: -1%;
+    }
+    .menu .cart-item #cont .counter .plus{
+        border: 3px solid white; 
+        color: #006400;
+        /* position: relative;
+        top: -30px;
+        left: 210px; */
+        font-weight: bolder;
+        font-size: x-large;
+        width: 30px; 
+        height: 36px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        top: 7px;
+    
+    }
+    .menu .cart-item #cont img{
+        width: 40px;
+        height:40px; 
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        top: 15px;
+        left: 8%;
+    }
+    .menu .cart-item #cont #name{
+        font-size: 40px;
+    }
+    .menu .cart-item #cont #ti{
+        background-color: white;
+        color: #006400;
+        font-size: 20px;
+        font-weight: bolder;
+        text-align: center;
+        width: 60px;
+        height: 30px;
+        border: 3px solid;
+        text-align: center;
+        margin-inline-start: 200px;
+        margin-block-start: 10px;
+        border: none;
+        padding-top: 4px;
+    }
+    .menu .cart-item #cont .ti{
+        position: relative;
+        left: 10px;
+    }
+    .menu .cart-item #cont .poids button{
+        font-size: 20px;
+        border: 3px solid ;
+        background-color: white;
+        color: #006400;
+        border-radius: 5px;
+        border: none;
+        text-align: center;
+        width: 60px;
+        height: 30px;
+        font-weight: bolder;
+        /* padding: 5px; */
+        margin-inline-start: 10px;
+        cursor: pointer;
+        margin-block:10px ;
+    }
+    .menu .cart-item #cont .poids button:hover{
+        /* border: 5px solid white; */
+        background-color: #006400;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <section class="menu" id="menu">
+        <div class="cart-items-container">
+            <center>
+                <div class="cart-item">
+                    <img class="pic1" src=" milk.jpeg" alt="pr">
+                    <img class="pic2" src=" lben.jpeg" alt="pr">
+
+                    <div id="cont" class="content1">
+                        <h3 id="name">Lait beldi </h3>
+                        <h3 id="ti">   1L  </h3>
+                        <div id="price1" class="prix">
+                            7.00 Dhs
+                        </div>
+                        <br>
+                        <div class="counter">
+                            <button class="minus" id="m1" onclick="minus1(),counter1()"> - </button>
+                            <div class="h12" id="choice1"> 1 </div>
+                            <button class="plus"  id="p1" onclick="plus1(),counter1()"> + </button>                              
+                            <img src="https://img.icons8.com/windows/32/ffffff/add-shopping-cart.png" onclick="increment1()"/>      
+                        </div>
+                    </div>
+
+                    <div id="cont" class="content2">
+                        <h3 id="name">Lben beldi </h3>
+                        <h3 id="ti">  1L </h3>
+                        <div id="price2" class="prix">
+                            6.50 Dhs
+                        </div>
+                        <br>
+                        <div class="counter">
+                            <button class="minus" id="m2" onclick="minus2(),counter2()"> - </button>
+                            <div class="h12" id="choice2"> 1 </div>
+                            <button class="plus"  id="p2" onclick="plus2(),counter2()"> + </button>
+                            <img src="https://img.icons8.com/windows/32/ffffff/add-shopping-cart.png"  onclick="increment2()"/>                
+                        </div>
+                    </div>
+                </div>
+            </center>
+            <!-- <div class="cart-item" id="cart">
+                
+            </div> -->
+            <center>
+                <div class="cart-item">
+                    <img class="pic3" src=" rayebmess.jpeg" alt="pr">
+                    <img class="pic4" src=" rayeb.jpeg" alt="pr">
+
+                    <div id="cont" class="content3">
+                        <h3 id="name">Rayeb beldi sucré </h3>
+                        <h3 id="ti">  1L </h3>
+                        <div id="price3" class="prix">
+                            13.00 Dhs
+                        </div>
+                        <br>
+                        <div class="counter">
+                            <button  class="minus" id="m3" onclick="minus3(),counter3()"> - </button>
+                            <div class="h12" id="choice3"> 1 </div>
+                            <button class="plus"  id="p3" onclick="plus3(),counter3()"> + </button>
+                            <img src="https://img.icons8.com/windows/32/ffffff/add-shopping-cart.png"  onclick="increment3()"/>                
+
+                        </div>
+                    </div>
+                    <div id="cont" class="content4">
+                        <h3 id="name" >Rayeb sans sucre </h3>
+                        <h3 id="ti">  1L </h3>
+                        <div  id="price4" class="prix">
+                            13.00 Dhs
+                        </div>
+                        <br>
+                        <div class="counter">
+                            <button  class="minus"  id="m4" onclick="minus4(),counter4()"> - </button>
+                            <div class="h12" id="choice4"> 1 </div>
+                            <button class="plus"  id="p4" onclick="plus4(),counter4()"> + </button>
+                            <img src="https://img.icons8.com/windows/32/ffffff/add-shopping-cart.png"  onclick="increment4()"/>                
+                        </div>
+                    </div>
+                </div>
+            </center>
+            <!-- <div class="cart-item" id="cart">
+                
+            </div> -->
+            <center>
+                <div class="cart-item">
+                    <img class="pic5" src=" zebda.jpeg" alt="pr">
+                    <img class="pic6" src=" smen.jpeg" alt="pr">
+
+                    <div id="cont" class="content5">
+                        <h3 id="name">Zebda beldia </h3>
+                        <div class="poids">
+                            <button id="poi1" onclick="pr1()">250g</button>
+                            <button id="Poi2" onclick="pr2()">500g</button>
+                            <button id="Poi3" onclick="pr3()">1Kg</button>
+                        </div>
+                        <div id="price5" class="prix">
+                            20.00 Dhs
+                        </div>
+                        <br>
+                        <div class="counter">
+                            <button class="minus"  id="m5" onclick="minus5(),counter5()"> - </button>
+                            <div class="h12" id="choice5"> 1 </div>
+                            <button class="plus"  id="p5" onclick="plus5(),counter5()"> + </button>
+                            <img src="https://img.icons8.com/windows/32/ffffff/add-shopping-cart.png"  onclick="increment5()"/>                
+                        </div>
+
+                    </div>
+                    <div id="cont" class="content6">
+                        <h3 id="name">Smen beldi </h3>
+                        <div class="poids">
+                            <button id="poi1" onclick="pr4()">250g</button>
+                            <button id="Poi2" onclick="pr5()">500g</button>
+                            <button id="Poi3" onclick="pr6()">1Kg</button>
+                        </div>
+                        <div id="price6" class="prix">
+                            37.50 Dhs
+                        </div>
+                        <br>
+                        <div class="counter">
+                            <button class="minus"  id="m6" onclick="minus6(),counter6()"> - </button>
+                            <div class="h12" id="choice6"> 1 </div>
+                            <button  class="plus" id="p6" onclick="plus6(),counter6()"> + </button>
+                            <img src="https://img.icons8.com/windows/32/ffffff/add-shopping-cart.png"  onclick="increment6()"/>                
+                        </div>
+                    </div>
+                </div>
+            </center>
+            <!-- <div class="cart-item" id="cart">
+
+            </div> -->
+            <center>
+                <div class="cart-item">
+                    <img class="pic7" src=" jben.jpeg" alt="pr">
+                    <img class="pic8" src=" jbnzaater.jpeg" alt="pr">
+
+                    <div id="cont" class="content7">
+                        <h3 id="name">Jben beldi </h3>
+                        <div class="poids">
+                            <button id="poi1" onclick="pr7()">250g</button>
+                            <button id="Poi2" onclick="pr8()">500g</button>
+                            <button id="Poi3" onclick="pr9()">1Kg</button>
+                        </div>
+                        <div id="price7" class="prix">
+                            14.00 Dhs
+                        </div>
+                        <br>
+                        <div class="counter">
+                            <button class="minus"  id="m7" onclick="minus7(),counter7()"> - </button>
+                            <div class="h12" id="choice7"> 1 </div>
+                            <button class="plus"  id="p7" onclick="plus7(),counter7()"> + </button>
+                            <img src="https://img.icons8.com/windows/32/ffffff/add-shopping-cart.png"  onclick="increment7()"/>                
+                        </div>
+                    </div>
+                    <div id="cont" class="content8">
+                        <h3 id="name">Jben b ze3tar </h3>
+                        <div class="poids">
+                            <button id="poi1" onclick="pr10()">250g</button>
+                            <button id="Poi2" onclick="pr11()">500g</button>
+                            <button id="Poi3" onclick="pr12()">1Kg</button>
+                        </div>
+                        <div id="price8" class="prix">
+                            17.00 Dhs
+                        </div>
+                        <br>
+                        <div class="counter">
+                            <button class="minus"  id="m8" onclick="minus8(),counter8()"> - </button>
+                            <div class="h12" id="choice8"> 1 </div>
+                            <button class="plus"  id="p8" onclick="plus8(),counter8()"> + </button>
+                            <img src="https://img.icons8.com/windows/32/ffffff/add-shopping-cart.png"  onclick="increment8()"/>                
+                        </div>
+                    </div>
+                </div>
+            </center>
+                <div class="cart-item">
+                    <center>
+                        <img class="pic9" src=" jben.jpeg" alt="pr">
+                    </center>
+                    <center>
+                        <div id="cont" class="content9">
+                            <h3 id="name">Jben avec l'Étang </h3>
+                            <div class="poids">
+                                <button id="poi1" onclick="pr13()">250g</button>
+                                <button id="Poi2" onclick="pr14()">500g</button>
+                                <button id="Poi3" onclick="pr15()">1Kg</button>
+                            </div>
+                            <div id="price9" class="prix">
+                                17.00 Dhs
+                            </div>
+                            <br>
+                            <div class="counter" id="c9">
+                                <button class="minus"  id="m9" onclick="minus9(),counter9()"> - </button>
+                                <div class="h12" id="choice9"> 1 </div>
+                                <button class="plus"  id="p9" onclick="plus9(),counter9()"> + </button>
+                                <img src="https://img.icons8.com/windows/32/ffffff/add-shopping-cart.png"  onclick="increment9()"/>                
+                            </div>
+                        </div>
+                    </center>
+                </div>
+
+        </div>
+            
+    </section>
+</body>
+</html>
